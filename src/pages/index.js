@@ -27,7 +27,6 @@ export default function Home({ launches }) {
           </div>
         </div>
       </main>
-
       <Footer></Footer>
     </div>
   );
@@ -36,8 +35,21 @@ export default function Home({ launches }) {
 Home.getInitialProps = async (ctx) => {
   const { publicRuntimeConfig } = getConfig();
   console.log("publicRuntimeConfig", publicRuntimeConfig);
-  const reqUrl = `${publicRuntimeConfig.API_ENDPOINT}/launches/upcoming`;
-  const res = await fetch("https://api.spacexdata.com/v4/launches/upcoming");
+  const reqUrl = `${publicRuntimeConfig.API_ENDPOINT}/launches/query`;
+  const payload = {
+    query: {},
+    options: {
+      limit: 8,
+      sort: {
+        flight_number: "asc",
+      },
+    },
+  };
+  const options = {
+    method: "POST",
+    body: JSON.stringify(payload),
+  };
+  const res = await fetch(reqUrl, options);
   const launches = await res.json();
-  return { launches: launches.splice(0, 10) };
+  return { launches: launches.docs.splice(0, 8) };
 };
