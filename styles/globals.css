@@ -14,3 +14,61 @@ a {
 * {
   box-sizing: border-box;
 }
+
+li,
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.top-filter {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 5px;
+  justify-content: center;
+}
+
+ul.top-filter li {
+  padding: 2px 20px;
+  border: 1px solid #e2e2e2;
+  border-radius: 5px;
+  display: flex;
+  cursor: pointer;
+  margin: 0 20px;
+  margin-top: 15px;
+  margin-left: 0;
+  background-color: #9fe483;
+}
+
+ul.top-filter li.active {
+  background-color: #ea513d;
+  color: #fff;
+  border-color: transparent;
+}
+
+.flex-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@media (min-width: 700px) {
+  .col-sm-12 {
+    width: 100%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .col-md-2 {
+    width: 20%;
+  }
+  .col-md-3 {
+    width: 25%;
+  }
+  .col-md-9 {
+    width: 75%;
+  }
+  .col-md-10 {
+    width: 80%;
+  }
+}
