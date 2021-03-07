@@ -1,6 +1,8 @@
 import Head from "next/head";
-import fetch from "isomorphic-unfetch";
 import getConfig from "next/config";
+import { useRouter } from "next/router";
+import moment from "moment";
+import axios from "axios";
 import styles from "../../styles/Home.module.css";
 import Footer from "../components/footer";
 import LaunchList from "../components/LaunchList";
@@ -8,6 +10,12 @@ import Filters from "../components/Filters";
 import "../../styles/Home.module.css";
 
 export default function Home({ launches }) {
+  const { query } = useRouter();
+  const initialValues = {
+    launchYear: query.launch_year || "",
+    successfulLaunch: query.successful_launch || "",
+    successfulLanding: query.successful_landing || "",
+  };
   return (
     <div className={styles.container}>
       <Head>
@@ -20,7 +28,7 @@ export default function Home({ launches }) {
 
         <div className={styles.grid}>
           <div className="col-sm-12 col-md-2">
-            <Filters></Filters>
+            <Filters initialValues={initialValues}></Filters>
           </div>
           <div className="col-sm-12 col-md-10 flex-list">
             <LaunchList launches={launches}></LaunchList>
@@ -32,12 +40,32 @@ export default function Home({ launches }) {
   );
 }
 
-Home.getInitialProps = async (ctx) => {
+export async function getServerSideProps(ctx) {
   const { publicRuntimeConfig } = getConfig();
-  console.log("publicRuntimeConfig", publicRuntimeConfig);
   const reqUrl = `${publicRuntimeConfig.API_ENDPOINT}/launches/query`;
+  const { launch_year, successful_launch, successful_landing } = ctx.query;
+
+  const query = {};
+
+  // Query formation logic starts below
+  if (launch_year) {
+    const previousYear = parseInt(launch_year);
+    const currentYear = parseInt(launch_year) + 1;
+    query["date_utc"] = {
+      $gte: moment(previousYear.toString()).toISOString(),
+      $lte: moment(currentYear.toString()).toISOString(),
+    };
+  }
+  if (successful_launch) {
+    query["success"] = successful_launch === "true";
+  }
+  if (successful_landing) {
+    query["cores.0.landing_success"] = successful_landing === "true";
+  }
+  // Query formation logic ends
+
   const payload = {
-    query: {},
+    query,
     options: {
       limit: 8,
       sort: {
@@ -45,11 +73,19 @@ Home.getInitialProps = async (ctx) => {
       },
     },
   };
-  const options = {
-    method: "POST",
-    body: JSON.stringify(payload),
+  console.log("payload", payload);
+  const res = await axios.post(reqUrl, payload);
+  const launches = res.data;
+
+  if (!launches) {
+    return {
+      notFound: true,
+    };
+  }
+
+  console.log("launches", launches);
+
+  return {
+    props: { launches: launches.docs }, // will be passed to the page component as props
   };
-  const res = await fetch(reqUrl, options);
-  const launches = await res.json();
-  return { launches: launches.docs.splice(0, 8) };
-};
+}
