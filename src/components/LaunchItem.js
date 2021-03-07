@@ -31,7 +31,9 @@ export default function LaunchItem({ item }) {
         <div className="disbursal-detail d-flex flex-row ">
           <div className="name"> Successful Landing:</div>
           <div className="value">
-            {_.capitalize(_.get(item.cores, "[0].landing_success", false))}
+            {_.capitalize(
+              _.get(item.cores, "[0].landing_success", false) || false
+            )}
           </div>
         </div>
       </div>
