@@ -18,17 +18,15 @@ You can start editing the page by modifying `pages/index.js`. The page auto-upda
 
 The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+## Heroku Deployed URL:-  https://spacex-launch-web.herokuapp.com/ 
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Lighthouse Results below:-
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+<img width="1440" alt="Screenshot 2021-03-07 at 6 51 57 AM" src="https://user-images.githubusercontent.com/10294556/110226662-3a0f7900-7f17-11eb-854d-9c90efc68984.png">
 
-## Deploy on Vercel
+<img width="1440" alt="Screenshot 2021-03-07 at 6 52 57 AM" src="https://user-images.githubusercontent.com/10294556/110226666-44317780-7f17-11eb-9cc2-15aede47791f.png">
+<img width="1440" alt="Screenshot 2021-03-07 at 6 53 29 AM" src="https://user-images.githubusercontent.com/10294556/110226668-472c6800-7f17-11eb-934a-042ba15b8c7c.png">
+<img width="1440" alt="Screenshot 2021-03-07 at 6 53 55 AM" src="https://user-images.githubusercontent.com/10294556/110226670-4a275880-7f17-11eb-8260-0b23aad67acd.png">
+<img width="1438" alt="Screenshot 2021-03-07 at 6 54 24 AM" src="https://user-images.githubusercontent.com/10294556/110226674-4d224900-7f17-11eb-8fe7-fe0e0336cc40.png">
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
