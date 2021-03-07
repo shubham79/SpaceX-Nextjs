@@ -27,7 +27,7 @@ export default function Home({ launches }) {
         <h1>SpaceX Launch Programs</h1>
 
         <div className={styles.grid}>
-          <div className="col-sm-12 col-md-2">
+          <div className="col-sm-12 col-md-2 flex-list">
             <Filters initialValues={initialValues}></Filters>
           </div>
           <div className="col-sm-12 col-md-10 flex-list">
