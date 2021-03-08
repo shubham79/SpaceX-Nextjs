@@ -51,7 +51,7 @@ ul.top-filter li.active {
   display: flex;
   flex-wrap: wrap;
   /* align-items: center; */
-  justify-content: center;
+  /* justify-content: center; */
 }
 
 .d-flex {
@@ -73,9 +73,12 @@ ul.top-filter li.active {
   text-align: left;
   color: #4b70b8;
 }
-@media (max-width: 576px) {
+@media (max-width: 700px) {
   .launch-detail h4 {
     font-size: 12px;
+  }
+  .flex-list {
+    justify-content: center;
   }
 }
 .launch-detail .name {
