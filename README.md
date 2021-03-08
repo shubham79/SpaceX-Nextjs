@@ -37,7 +37,6 @@ The `pages/api` directory is mapped to `/api/*`. Files in this directory are tre
 <img width="1440" alt="Screenshot 2021-03-08 at 11 03 43 AM" src="https://user-images.githubusercontent.com/10294556/110278935-3b67a100-7ffe-11eb-8c96-d73fd4f6a586.png">
 <img width="1440" alt="Screenshot 2021-03-08 at 11 03 54 AM" src="https://user-images.githubusercontent.com/10294556/110278953-402c5500-7ffe-11eb-9d10-eef5773cab33.png">
 
-<img width="1440" alt="Screenshot 2021-03-07 at 6 53 29 AM" src="https://user-images.githubusercontent.com/10294556/110226668-472c6800-7f17-11eb-934a-042ba15b8c7c.png">
 
 
 
