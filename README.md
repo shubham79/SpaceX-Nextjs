@@ -29,17 +29,15 @@ The `pages/api` directory is mapped to `/api/*`. Files in this directory are tre
 ## Lighthouse Results below:-
 
 
-<img width="1440" alt="Screenshot 2021-03-07 at 6 51 57 AM" src="https://user-images.githubusercontent.com/10294556/110226662-3a0f7900-7f17-11eb-854d-9c90efc68984.png">
 
+<img width="1440" alt="Screenshot 2021-03-08 at 11 02 54 AM" src="https://user-images.githubusercontent.com/10294556/110278901-2b4fc180-7ffe-11eb-993f-e34f26fab192.png">
 
-<img width="1440" alt="Screenshot 2021-03-07 at 6 52 57 AM" src="https://user-images.githubusercontent.com/10294556/110226666-44317780-7f17-11eb-9cc2-15aede47791f.png">
+<img width="1440" alt="Screenshot 2021-03-08 at 11 03 22 AM" src="https://user-images.githubusercontent.com/10294556/110278916-31de3900-7ffe-11eb-8571-79c67fd59fd8.png">
 
+<img width="1440" alt="Screenshot 2021-03-08 at 11 03 43 AM" src="https://user-images.githubusercontent.com/10294556/110278935-3b67a100-7ffe-11eb-8c96-d73fd4f6a586.png">
+<img width="1440" alt="Screenshot 2021-03-08 at 11 03 54 AM" src="https://user-images.githubusercontent.com/10294556/110278953-402c5500-7ffe-11eb-9d10-eef5773cab33.png">
 
 <img width="1440" alt="Screenshot 2021-03-07 at 6 53 29 AM" src="https://user-images.githubusercontent.com/10294556/110226668-472c6800-7f17-11eb-934a-042ba15b8c7c.png">
 
 
-<img width="1440" alt="Screenshot 2021-03-07 at 6 53 55 AM" src="https://user-images.githubusercontent.com/10294556/110226670-4a275880-7f17-11eb-8260-0b23aad67acd.png">
-
-
-<img width="1438" alt="Screenshot 2021-03-07 at 6 54 24 AM" src="https://user-images.githubusercontent.com/10294556/110226674-4d224900-7f17-11eb-8fe7-fe0e0336cc40.png">
 
